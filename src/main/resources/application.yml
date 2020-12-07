@@ -1,7 +1,7 @@
 server:  port: 8080
 
-spring:  profiles:    active:    - local  security:    oauth2:      client:        registration:          google:
+spring:  security:    oauth2:      client:        registration:          google:
             client-id: 949234840463-6nfftjqq423hpq6j1d4f8fjecajhsnd7.apps.googleusercontent.com
             client-secret: hdmEH-NM2wQ_SAgtYPhuVxnN
             scope:            - profile
-            - email            ---spring:  profiles: local  jpa:    generate-ddl: true    show-sql: true  datasource:    driver-class-name: org.mariadb.jdbc.Driver    url: jdbc:mariadb://172.16.10.168:3306/edgeclouddb?characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true    username: edgecloud    password: sptek123!@#  mvc:    view:      prefix: /WEB-INF/jsp/      suffix: .jsp              
+            - email            ---spring:  profiles: local  jpa:    generate-ddl: true    show-sql: true  datasource:    driver-class-name: org.mariadb.jdbc.Driver    url: jdbc:mariadb://172.16.10.168:3306/edgeclouddb?characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true    username: edgecloud    password: sptek123!@#  mvc:    view:      prefix: /WEB-INF/jsp/      suffix: .jsp      ---spring:  profiles: aws  jpa:    generate-ddl: true    show-sql: true  datasource:    driver-class-name: org.mariadb.jdbc.Driver    url: jdbc:mariadb://database-1.cdj31rvjh0ae.us-east-2.rds.amazonaws.com:3306/mycloud?characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true    username: root    password: root1234!  mvc:    view:      prefix: /WEB-INF/jsp/      suffix: .jsp        
